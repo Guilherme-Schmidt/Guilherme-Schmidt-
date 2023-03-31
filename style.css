@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(49, 49, 49);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 0;
+}
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    left: 80%;
+}
+
+li{
+    margin: 40px;
+    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+hr{
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+    height: 50vh;
+    border: 1px solid red;
+  }
+
+.apresentacao h1 {
+    font-size: 4rem;
+    color: rgb(174, 199, 236);
+    position: relative;
+    top: 10%;
+  }
+  p{
+    color: white;
+    position: relative;
+    top:20%;
+    font-size: 1.5rem;
+  }
+
+  .habilidades h1{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    margin-top: 2%;
+  }
+
+  .box{
+    display: inline-block;
+    
+  }
