@@ -1,78 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-body {
-    background-color: rgb(49, 49, 49);
+
+body{
+    background-color: #141414;
+    height: 100vh;
 }
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.titulo{
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    border-top: 2px solid #0515f1;
+    border-bottom: 2px solid #0515f1;
+    border-radius: 30px;
+}
+
+/* Cabeçalho */
 
 header{
+    padding: 40px 4%;
+
+}
+
+header > .interface{
     display: flex;
     align-items: center;
-    padding: 20px 0 0;
-}
-nav {
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-ul{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    padding: 0;
-    position: relative;
-    left: 80%;
-}
-
-li{
-    margin: 40px;
-    
-}
-
-a {
-    color: white;
+header a{
+    color: #fff;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-}
-hr{
-    color: white;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 5%;
-    height: 50vh;
-    border: 1px solid red;
-  }
+header nav ul{
+    list-style-type: none;
+}
 
-.apresentacao h1 {
-    font-size: 4rem;
-    color: rgb(174, 199, 236);
-    position: relative;
-    top: 10%;
-  }
-  p{
-    color: white;
-    position: relative;
-    top:20%;
-    font-size: 1.5rem;
-  }
-
-  .habilidades h1{
-    color: white;
-    text-align: center;
-    font-size: 3rem;
-    position: relative;
-    margin-top: 2%;
-  }
-
-  .box{
+header nav ul li{
     display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #0614dd;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+header .btn-contato button:hover{
+    box-shadow: 0px 0px 8px #0515f1;
+}
+/* Topo */
+
+section.topo{
+    padding: 40px 4%;
+}
+
+section.topo .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.topo h1{
+    color: white;
+    font-size: 40px;
+}
+
+
+
+.topo p{
+    color: white;
+    font-size: 20px;
+    margin: 40px 0;
+}
+
+.btn-curriculo button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #0614dd;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn-curriculo button:hover{
+    box-shadow: 0px 0px 10px #0515f1;
+    transform: scale(1.02);
+}
+
+.topo .img-topo img{
+    position: relative;
+    animation: mover-img 2s ease-in-out infinite alternate;
+
+}
+
+/*Atuação */
+
+section.atuacao{
+    padding: 40px 4%;
+}
+
+section.atuacao .flex{
+    gap: 60px;
     
-  }
+}
+
+.atuacao .at-box{
+    padding: 40px;
+    color: white;
+    border-radius: 30px;
+    margin-top: 50px;
+    transition: .2s;
+}
+
+.atuacao .at-box:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 8px white;
+}
+
+.atuacao .at-box i{
+    font-size: 70px;
+    color: #0059ff;
+
+}
+
+.atuacao .at-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/*Sobre Mim*/
+
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 40px;
+}
+.sobre .txt-sobre{
+    color: white;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+    font-size: 20px;
+}
+.sobre .txt-sobre .btn-redes{
+    text-align: center;
+    margin: 40px;
+    padding: 40px 4%;
+}
+.sobre .txt-sobre .btn-redes button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #0614dd;;
+    cursor: pointer !important;
+    font-size: 22px;
+    
+}
+
+.sobre .btn-redes button:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 8px white;
+}
+
+/* Habilidades */
+section.habilidades{
+    padding: 80px 4%;
+ 
+}
+section.habilidades .flex{
+    display: grid !important;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+    justify-items: center;
+
+}
+
+
+.hab-box{
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+    margin-top: 50px;
+    transition: .2s;
+ 
+}
+
+.hab-box:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 8px white;
+    
+}
+
+.hab-box h3{
+    font-size: 40px;
+    margin: 15px 30px;
+}
+
+@keyframes mover-img {
+    0%{
+        top: 0;
+
+    }
+    100%{
+        top: 30px;
+    }
+}
