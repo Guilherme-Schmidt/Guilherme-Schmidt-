@@ -86,6 +86,7 @@ section.topo .flex{
 .topo h1{
     color: white;
     font-size: 40px;
+    line-height:45px ;
 }
 
 
@@ -238,3 +239,52 @@ section.habilidades .flex{
         top: 30px;
     }
 }
+
+/*Responsividade*/
+
+@media screen and (max-width: 1020px){
+    .flex{
+        flex-direction: column;
+    }
+   
+    .menu-desktop,.btn-contato{
+        display: none;
+    } 
+
+    section.topo{
+        padding: 20px 8%;
+    }
+
+    section.topo .flex{
+        gap: 40px;
+    }
+    .topo h1{
+        
+        font-size: 30px;    
+        
+    }
+
+    section.atuacao{
+        padding: 40px 8%;
+    }
+
+    .titulo{
+        font-size: 25px;
+        line-height: 50px;
+    }
+
+    section.habilidades .flex{
+        display: grid !important;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(3, 1fr);
+        width: 40%;
+       
+    
+    }
+    
+
+    section.sobre{
+        flex-direction: column-reverse;
+        padding: 20px 8%;
+    }
+}   
